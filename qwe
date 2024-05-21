@@ -1,0 +1,17 @@
+FluentConsole
+    .White.Background
+    .Green.Line("Hello there!");
+
+FluentConsole
+    .White.Text("Fluent")
+    .Red.Text("Console");
+
+var console = FluentConsole.Instance;
+
+console.Blue.Line(1);
+console.Cyan.Line(2);
+
+FluentConsole
+    .White.Text("Result: ")
+    .With(c => result.IsSuccess ? c.Green : c.Red)
+    .Line(result.Code)
